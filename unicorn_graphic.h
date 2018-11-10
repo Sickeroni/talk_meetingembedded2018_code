@@ -1,4 +1,5 @@
-
+// source: https://pixabay.com/de/tier-pferde-im-galopp-pferd-2069866/
+// exported as 64x32 with gimp
 static const char *header_data_unicorn =
         "!0]!!0]$!0](!0]-!0]0!0]4!0]8!0]<!@]B!0]E!@]I'P&#GJ#NQ70/+_B;/>^I"
                 "H9WW8]7+,?:I*/RF!0^1!0^5!0^9!0^=!0^B!0^E!0^I!0^M!0^Q!0^V!0^Y!0^^"

@@ -3,8 +3,8 @@
 #include <iomanip>
 #include <iostream>
 
-#include "2018.h"   //graphic-array
-#include "unicorn.h" //graphic-array
+#include "meetingembedded_graphic.h"   //graphic-array
+#include "unicorn_graphic.h" //graphic-array
 using std::uint8_t;
 
 struct led_color_t {

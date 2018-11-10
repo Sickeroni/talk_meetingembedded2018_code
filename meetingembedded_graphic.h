@@ -1,5 +1,5 @@
 /*  GIMP header image file format (RGB): /home/sicki/Dokumente/2018.h  */
-
+// exported as 64x32 with gimp
 static unsigned int width = 64;
 static unsigned int height = 32;
 
