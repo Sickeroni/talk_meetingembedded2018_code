@@ -159,10 +159,10 @@ include_directories("${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12"
 
 
 
-add_executable(${PROJECT_NAME}.elf
+add_executable(pin_toggle_kvasir.elf
 		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/gcc/startup_MK64F12.S"
 
-		"${PROJECT_SOURCE_DIR}/main.cpp"
+		"${PROJECT_SOURCE_DIR}/pin_toggle_kvasir.cpp"
 #		"${PROJECT_SOURCE_DIR}/clock_config.c"
 #		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/drivers/fsl_gpio.c"
 #		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/drivers/fsl_smc.c"
@@ -184,5 +184,32 @@ add_executable(${PROJECT_NAME}.elf
 #		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/utilities/io/fsl_io.c"
 #		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/utilities/log/fsl_log.c"
 #		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/utilities/str/fsl_str.c"
+		)
+
+add_executable(pin_toggle_vendor.elf
+		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/gcc/startup_MK64F12.S"
+
+		"${PROJECT_SOURCE_DIR}/pin_toggle_vendor.cpp"
+		#		"${PROJECT_SOURCE_DIR}/clock_config.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/drivers/fsl_gpio.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/drivers/fsl_smc.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/drivers/fsl_uart.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/drivers/fsl_sim.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/drivers/fsl_clock.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/drivers/fsl_enet.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/drivers/fsl_pit.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/drivers/fsl_flash.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/drivers/fsl_common.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/drivers/fsl_wdog.c"
+
+		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/system_MK64F12.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/utilities/fsl_debug_console.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/utilities/fsl_assert.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/utilities/fsl_debug_console.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/utilities/fsl_notifier.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/utilities/fsl_shell.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/utilities/io/fsl_io.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/utilities/log/fsl_log.c"
+		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/utilities/str/fsl_str.c"
 		)
 
