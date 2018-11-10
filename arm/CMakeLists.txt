@@ -191,7 +191,7 @@ add_executable(pin_toggle_vendor.elf
 
 		"${PROJECT_SOURCE_DIR}/pin_toggle_vendor.cpp"
 		#		"${PROJECT_SOURCE_DIR}/clock_config.c"
-		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/drivers/fsl_gpio.c"
+				"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/drivers/fsl_gpio.c"
 		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/drivers/fsl_smc.c"
 		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/drivers/fsl_uart.c"
 		#		"${PROJECT_DEPENDENCY_DIR}/ksdk/devices/MK64F12/drivers/fsl_sim.c"
