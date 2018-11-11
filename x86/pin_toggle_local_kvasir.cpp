@@ -13,17 +13,17 @@ int main(void); // needed here to be callable in main.c (otherwise name mangelin
 
 int main()
 {
-    //halt cpu
     std::cout << "halt" << std::endl;
 
     /* Port C Clock Gate Control: Clock enabled */
     apply(write(Kvasir::SimScgc5::PortcValC::v1));
-    seamoutput();
+
     /* PORTC16 is configured as GPIO*/
     constexpr static auto pin_to_toggle = makePinLocation(Kvasir::Io::portC, Kvasir::Io::pin16);
     apply(write(Kvasir::PortcPcr16::MuxValC::v001));
     /* Port C16 to Output */
     apply(makeOutput(pin_to_toggle));
+
 
     while (1)
     {

@@ -14,18 +14,16 @@ namespace Kvasir
         template <typename T>
         struct ExecuteSeam<T, ::Kvasir::Tag::User> : RecordActions<T>
         {
-            ExecuteSeam() {
+            ~ExecuteSeam() {
                 for (auto iter : Kvasir::Register::actions_)
                 {
                     std::cout << "mww 0x" << std::setfill('0') << std::hex << std::setw(8) << iter.address_;
                     std::cout << " 0x" << std::setfill('0') << std::hex << std::setw(8) << iter.value_ << "\n";
+
                 }
                 Kvasir::Register::actions_.clear();
             }
         };
-    }
-}
-void seamoutput()
-{
 
+    }
 }
