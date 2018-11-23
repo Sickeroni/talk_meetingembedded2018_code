@@ -33,5 +33,21 @@ endif(kvasir_RES_LEN EQUAL 0)
 include_directories(${PROJECT_DEPENDENCY_DIR}/Kvasir/Lib)
 add_executable(pin_toggle_local_kvasir pin_toggle_local_kvasir.cpp)
 
+
+
+SET(Boost_USE_STATIC_LIBS OFF)
+SET(Boost_USE_MULTITHREAD ON)
+FIND_PACKAGE(Boost REQUIRED COMPONENTS system thread regex)
+IF(Boost_FOUND)
+    INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
+    LINK_DIRECTORIES(${Boost_LIBRARY_DIRS})
+ENDIF(Boost_FOUND)
+
+SET(USED_LIBS ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY} ${Boost_REGEX_LIBRARY})
+
+add_executable(sfr_wrapper_proof SFR_wrapper_proof.cpp)
+TARGET_LINK_LIBRARIES(sfr_wrapper_proof ${Boost_INCLUDE_DIRS} ${USED_LIBS})
+
 #include_directories(${PROJECT_DEPENDENCY_DIR}/Kvasir/Lib)
 add_executable(real_ledpanel real_ledpanel.cpp)
+TARGET_LINK_LIBRARIES(real_ledpanel ${USED_LIBS})
